@@ -37,6 +37,7 @@ body {
   line-height: 1.4;
   color: var(--dark-color);
   background-color: var(--white-color);
+  overflow-x: hidden;
 }
 
 a {
@@ -1122,6 +1123,10 @@ d. Main product
   margin-top: 2em;
 }
 
+.banners .product-categories .col {
+  margin-top: 2em;
+}
+
 .banners .product-categories .item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1165,6 +1170,20 @@ a. News Letter
   padding: 2.5em 0;
   background-color: var(--dark-color);
   color: var(--white-color);
+}
+
+.newsletter .box {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newsletter .box .content {
+  text-align: center;
+}
+
+.newsletter .box .search {
+  margin: auto;
 }
 
 .newsletter h3 {
@@ -1375,6 +1394,14 @@ a. search
             flex: 0 0 33.33333%;
   }
 }
+@media screen and (max-width: 768px) {
+  .banners .banner:nth-child(1) .col {
+    margin-bottom: 2em;
+  }
+  .widgets .col .item {
+    text-align: center;
+  }
+}
 @media screen and (min-width: 992px) {
   .container {
     padding: 0 2em;
@@ -1553,9 +1580,6 @@ a. search
     display: -ms-flexbox;
     display: flex;
   }
-  .slider > div > .wrapper {
-    width: calc(100% - (300px + 2em));
-  }
   .trending .products, .product-categories .row {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33.3333%;
@@ -1586,8 +1610,26 @@ a. search
   .logo a {
     margin-top: 12px;
   }
+  .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: var(--light-bg-color);
+    margin: 0;
+  }
   .header-nav .right a {
     margin-top: 12px;
+  }
+  .slider {
+    margin-top: 6em;
+  }
+  .slider > .container > .wrapper {
+    width: 100%;
+  }
+  .trending .wrapper .products.big {
+    margin-bottom: 3em;
   }
   .products.big .item {
     margin: 0 auto;
